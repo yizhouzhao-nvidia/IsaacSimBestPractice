@@ -30,7 +30,7 @@ keys_SET_VALUES =  [
     # camera
     ("CameraInfoPublish.inputs:topicName", "camera_info"),
     ("CameraInfoPublish.inputs:frameId", "sim_camera"),
-    ("CameraInfoPublish.inputs:nodeNamespace", "/isaac"),
+    # ("CameraInfoPublish.inputs:nodeNamespace", "/isaac"),
     ("CameraInfoPublish.inputs:resetSimulationTimeOnStop", True),
     ("RGBPublish.inputs:frameId", "sim_camera"),
     ("RGBPublish.inputs:nodeNamespace", "/isaac"),
@@ -47,4 +47,13 @@ keys_CONNECT = [
     ("Context.outputs:context", "CameraInfoPublish.inputs:context"),
     ("Context.outputs:context", "RGBPublish.inputs:context"),
 ]
+
+(graph_handle, nodes, _, _) = og.Controller.edit(
+    {"graph_path": og_path, "evaluator_name": "execution"},
+    {
+        keys.CREATE_NODES: keys_CREATE_NODES,
+        keys.SET_VALUES: keys_SET_VALUES, 
+        keys.CONNECT: keys_CONNECT
+    },
+)
 
