@@ -54,7 +54,7 @@ keys_CREATE_NODES = [
 
 keys_SET_VALUES =  [
     ("RenderProduct1.inputs:cameraPrim", "/World/ZED_X/base_link/ZED_X/CameraLeft"),
-    ("RenderProduct1.inputs:height", 1080),
+    ("RenderProduct1.inputs:height", 1200),
     ("RenderProduct1.inputs:width", 1920),
     
 
@@ -69,7 +69,7 @@ keys_SET_VALUES =  [
     ("RGBPublish1.inputs:topicName", "rgb_left"),
 
     ("RenderProduct2.inputs:cameraPrim", "/World/ZED_X/base_link/ZED_X/CameraRight"),
-    ("RenderProduct2.inputs:height", 1080),
+    ("RenderProduct2.inputs:height", 1200),
     ("RenderProduct2.inputs:width", 1920),
     
     # camera
